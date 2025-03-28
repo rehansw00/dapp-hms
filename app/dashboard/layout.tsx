@@ -124,9 +124,9 @@ export default function DashboardLayout({
       return [
         ...baseItems,
         {
-          name: "Patients",
+          name: "Search Patients",
           icon: Users,
-          path: `/dashboard/${role}/patients`
+          path: `/dashboard/${role}/patients/search`
         },
         {
           name: "Add Record",
@@ -143,6 +143,11 @@ export default function DashboardLayout({
       // Patient
       return [
         ...baseItems,
+        {
+          name: "Find Doctor",
+          icon: Users,
+          path: `/dashboard/${role}/find-doctor`
+        },
         {
           name: "My Records",
           icon: Database,
