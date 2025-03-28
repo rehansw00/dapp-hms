@@ -112,20 +112,12 @@ export default function DashboardLayout({
         {
           name: "Manage Doctors",
           icon: Users,
-<<<<<<< HEAD
-          path: "/dashboard/admin/doctors",
-=======
-          path: `/dashboard/${role}/doctors`,
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
+          path: `/dashboard/${role}/doctors`
         },
         {
           name: "Add Doctor",
           icon: PlusCircle,
-<<<<<<< HEAD
-          path: "/dashboard/admin/doctors/add",
-=======
-          path: `/dashboard/${role}/doctors/add`,
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
+          path: `/dashboard/${role}/doctors/add`
         },
       ]
     } else if (role === "doctor") {
@@ -134,29 +126,17 @@ export default function DashboardLayout({
         {
           name: "Patients",
           icon: Users,
-<<<<<<< HEAD
-          path: "/dashboard/doctor/patients",
-=======
-          path: `/dashboard/${role}/patients`,
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
+          path: `/dashboard/${role}/patients`
         },
         {
           name: "Add Record",
           icon: FileText,
-<<<<<<< HEAD
-          path: "/dashboard/doctor/records/add",
-=======
-          path: `/dashboard/${role}/records/add`,
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
+          path: `/dashboard/${role}/records/add`
         },
         {
           name: "Appointments",
           icon: Calendar,
-<<<<<<< HEAD
-          path: "/dashboard/doctor/appointments",
-=======
-          path: `/dashboard/${role}/appointments`,
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
+          path: `/dashboard/${role}/appointments`
         },
       ]
     } else {
@@ -166,20 +146,12 @@ export default function DashboardLayout({
         {
           name: "My Records",
           icon: Database,
-<<<<<<< HEAD
-          path: "/dashboard/patient/records",
-=======
-          path: `/dashboard/${role}/records`,
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
+          path: `/dashboard/${role}/records`
         },
         {
           name: "Appointments",
           icon: Calendar,
-<<<<<<< HEAD
-          path: "/dashboard/patient/appointments",
-=======
-          path: `/dashboard/${role}/appointments`,
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
+          path: `/dashboard/${role}/appointments`
         },
       ]
     }
@@ -241,7 +213,3 @@ export default function DashboardLayout({
     </SidebarProvider>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
