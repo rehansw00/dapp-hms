@@ -1,0 +1,176 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px); /* Adjust for header and footer */
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4eff9 100%);
+}
+
+.login-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.metamask-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metamask-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.metamask-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.metamask-info {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.metamask-download {
+  display: block;
+  margin-top: 0.5rem;
+  color: #3498db;
+  font-weight: 500;
+}
+
+.unregistered-section {
+  text-align: center;
+}
+
+.unregistered-message {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.unregistered-info {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #7f8c8d;
+}
+
+.redirect-section {
+  text-align: center;
+}
+
+.redirect-message {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(52, 152, 219, 0.3);
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.registration-form {
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.alert-danger {
+  background-color: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #c0392b;
+}
+
+.alert i {
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
+}
+
+@media screen and (max-width: 576px) {
+  .login-card {
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+}
+
