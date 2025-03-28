@@ -10,8 +10,11 @@ export default function Home() {
             <h1 className="text-3xl font-bold text-primary">MediChain</h1>
           </div>
           <div className="flex gap-4">
-            <Link href="/login">
-              <Button variant="outline">Login</Button>
+            <Link href="/login?role=doctor">
+              <Button variant="outline">Doctor Login</Button>
+            </Link>
+            <Link href="/login?role=patient">
+              <Button variant="outline">Patient Login</Button>
             </Link>
           </div>
         </header>
@@ -24,12 +27,12 @@ export default function Home() {
               doctors and patients with decentralized healthcare records.
             </p>
             <div className="flex gap-4">
-              <Link href="/login">
-                <Button size="lg">Get Started</Button>
+              <Link href="/signup">
+                <Button size="lg">Register as Patient</Button>
               </Link>
-              <Link href="#features">
+              <Link href="/login?role=doctor">
                 <Button variant="outline" size="lg">
-                  Learn More
+                  Doctor Login with MetaMask
                 </Button>
               </Link>
             </div>

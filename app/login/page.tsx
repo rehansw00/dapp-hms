@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -21,6 +21,8 @@ export default function LoginPage() {
   const [isConnecting, setIsConnecting] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const role = searchParams?.get('role') || 'patient'
 
   useEffect(() => {
     // Check if MetaMask is installed
@@ -45,7 +47,7 @@ export default function LoginPage() {
           // For demo purposes, we'll use a timeout to simulate contract interaction
           setTimeout(() => {
             // Redirect based on role (this would be determined by your contract)
-            const path = "/dashboard/patient" // or "/dashboard/doctor" or "/dashboard/admin"
+            const path = role === 'doctor' ? '/dashboard/doctor' : '/dashboard/patient'
             router.push(path)
           }, 1000)
         }
@@ -64,7 +66,7 @@ export default function LoginPage() {
         <CardHeader>
           <CardTitle className="text-2xl text-center">Login to MediChain</CardTitle>
           <CardDescription className="text-center">
-            Connect with MetaMask to access the hospital management system
+            {role === 'doctor' ? 'Connect with MetaMask to access the doctor portal' : 'Login to access your patient portal'}
           </CardDescription>
         </CardHeader>
         <CardContent>
