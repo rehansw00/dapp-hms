@@ -56,12 +56,13 @@ export default function DashboardLayout({
 
           // Determine role based on path
           // In a real app, you would get this from your smart contract
-          if (pathname.includes("/dashboard/admin")) {
-            setRole("admin")
-          } else if (pathname.includes("/dashboard/doctor")) {
-            setRole("doctor")
+          const pathParts = pathname?.split("/") || [];
+          const roleFromPath = pathParts[2];
+          
+          if (roleFromPath === "admin" || roleFromPath === "doctor" || roleFromPath === "patient") {
+            setRole(roleFromPath);
           } else {
-            setRole("patient")
+            setRole("patient"); // Default role
           }
         } catch (error) {
           console.error("Failed to check authentication", error)
@@ -111,12 +112,20 @@ export default function DashboardLayout({
         {
           name: "Manage Doctors",
           icon: Users,
+<<<<<<< HEAD
           path: "/dashboard/admin/doctors",
+=======
+          path: `/dashboard/${role}/doctors`,
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
         },
         {
           name: "Add Doctor",
           icon: PlusCircle,
+<<<<<<< HEAD
           path: "/dashboard/admin/doctors/add",
+=======
+          path: `/dashboard/${role}/doctors/add`,
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
         },
       ]
     } else if (role === "doctor") {
@@ -125,17 +134,29 @@ export default function DashboardLayout({
         {
           name: "Patients",
           icon: Users,
+<<<<<<< HEAD
           path: "/dashboard/doctor/patients",
+=======
+          path: `/dashboard/${role}/patients`,
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
         },
         {
           name: "Add Record",
           icon: FileText,
+<<<<<<< HEAD
           path: "/dashboard/doctor/records/add",
+=======
+          path: `/dashboard/${role}/records/add`,
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
         },
         {
           name: "Appointments",
           icon: Calendar,
+<<<<<<< HEAD
           path: "/dashboard/doctor/appointments",
+=======
+          path: `/dashboard/${role}/appointments`,
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
         },
       ]
     } else {
@@ -145,12 +166,20 @@ export default function DashboardLayout({
         {
           name: "My Records",
           icon: Database,
+<<<<<<< HEAD
           path: "/dashboard/patient/records",
+=======
+          path: `/dashboard/${role}/records`,
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
         },
         {
           name: "Appointments",
           icon: Calendar,
+<<<<<<< HEAD
           path: "/dashboard/patient/appointments",
+=======
+          path: `/dashboard/${role}/appointments`,
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
         },
       ]
     }
@@ -212,4 +241,7 @@ export default function DashboardLayout({
     </SidebarProvider>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e52528a2ff2bc17f73cf90522ac229f92bf53480
