@@ -1,0 +1,77 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\rehan\\Downloads\\GIT NEw\\FINAL 2\\hospital-manage\\contracts\\HospitalManagement.sol": {
+      "lastModificationDate": 1743367701199,
+      "contentHash": "5456a00ea926ed4756aef2edc27a7450",
+      "sourceName": "contracts/HospitalManagement.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "HospitalManagement"
+      ]
+    },
+    "C:\\Users\\rehan\\Downloads\\GIT NEw\\FINAL 2\\hospital-manage\\contracts\\UserStorage.sol": {
+      "lastModificationDate": 1743367612749,
+      "contentHash": "c15c49ac3100677d49d2901030382581",
+      "sourceName": "contracts/UserStorage.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "UserStorage"
+      ]
+    }
+  }
+}

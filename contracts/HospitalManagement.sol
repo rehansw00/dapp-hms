@@ -123,12 +123,34 @@ contract HospitalManagement {
         emit DoctorAdded(doctorAddress, name, specialty);
     }
     
-    function removeDoctor(address doctorAddress) external on  name, specialty);
-    }
-    
-    function removeDoctor(address doctorAddress) external onlyAdmin {
+    function updateDoctor(
+        address doctorAddress,
+        string memory name,
+        string memory specialty,
+        string memory licenseNumber,
+        string memory department,
+        string memory contactInfo,
+        bool isActive
+    ) external onlyAdmin {
         require(isDoctor[doctorAddress], "Doctor not registered");
         
+        doctors[doctorAddress] = Doctor({
+            name: name,
+            specialty: specialty,
+            licenseNumber: licenseNumber,
+            department: department,
+            contactInfo: contactInfo,
+            isActive: isActive,
+            dateAdded: doctors[doctorAddress].dateAdded
+        });
+        
+        emit DoctorAdded(doctorAddress, name, specialty);
+    }
+    
+    function removeDoctor(address doctorAddress) external onlyOwner {
+        require(isDoctor[doctorAddress], "Doctor not registered");
+        
+        // Mark doctor as inactive
         doctors[doctorAddress].isActive = false;
         isDoctor[doctorAddress] = false;
         
